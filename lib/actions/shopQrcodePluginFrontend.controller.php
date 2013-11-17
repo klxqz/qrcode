@@ -8,9 +8,12 @@ class shopQrcodePluginFrontendController extends waController {
         include $include_path;
         $path = wa()->getAppCachePath('plugins/qrcode/','shop');
         waFiles::create($path);
-        $name = $this->uniqueName($path);
+        //$name = $this->uniqueName($path);
+        $name = sha1('data').'.png';
         $filename = $path.$name;
-        QRcode::png('data', $filename, 'L', '4', 2); 
+        if(!file_exists($filename)) {
+            QRcode::png('data', $filename, 'L', '4', 2); 
+        }
         $im = imagecreatefrompng($filename);
         header('Content-Type: image/png');
         imagepng($im);
