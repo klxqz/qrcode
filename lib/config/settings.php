@@ -2,129 +2,69 @@
 
 return array(
     'status' => array(
-        'title' => 'Статус',
+        'title' => 'Статус плагина',
         'description' => '',
         'value' => '1',
         'control_type' => waHtmlControl::SELECT,
         'options' => array(
             '0' => 'Выключен',
             '1' => 'Включен',
-
         )
     ),
-    
-    'text' => array(
-        'title' => 'Текс',
+    'qrcode_size' => array(
+        'title' => 'Размер изображения',
         'description' => '',
-        'value' => '&uarr;',
-        'control_type' => waHtmlControl::INPUT,
-    ),
-    
-    'width' => array(
-        'title' => 'Ширина',
-        'description' => 'Ширина блока в пикселях',
-        'value' => '100',
-        'control_type' => waHtmlControl::INPUT,
-    ),
-    'height' => array(
-        'title' => 'Высота',
-        'description' => 'Высота блока в пикселях',
-        'value' => '50',
-        'control_type' => waHtmlControl::INPUT,
-    ),
-    
-    'position_horizontal' => array(
-        'title' => 'Размещение по горизонтали',
-        'description' => '',
-        'value' => 'right',
+        'value' => '4',
         'control_type' => waHtmlControl::SELECT,
         'options' => array(
-            'right' => 'Справа',
-            'left' => 'Слева',
-
+            '1' => '1',
+            '2' => '2',
+            '3' => '3',
+            '4' => '4',
+            '5' => '5',
+            '6' => '6',
+            '7' => '7',
+            '8' => '8',
+            '9' => '9',
+            '10' => '10',
         )
     ),
-    'position_vertical' => array(
-        'title' => 'Размещение по вертикале',
+    'frontend_product' => array(
+        'title' => 'Вывод в карточке товара',
         'description' => '',
-        'value' => 'bottom',
-        'control_type' => waHtmlControl::SELECT,
-        'options' => array(
-            'top' => 'Сверху',
-            'bottom' => 'Снизу',
-
-        )
-    ),
-    
-    'text_align' => array(
-        'title' => 'Выравнивание текста',
-        'description' => '',
-        'value' => 'center',
-        'control_type' => waHtmlControl::SELECT,
-        'options' => array(
-            'center' => 'По центру',
-            'justify' => 'По ширине',
-            'left' => 'По левому краю',
-            'right' => 'По правому краю',
-
-        )
-    ),
-    'text_color' => array(
-        'title' => 'Цвет текста',
-        'description' => 'Цвет в шестнадцатиричном виде #000000, http://getcolor.ru/',
-        'value' => '#666666',
-        'control_type' => waHtmlControl::INPUT,
-    ),
-    
-    'font_size' => array(
-        'title' => 'Размер текста',
-        'description' => 'Размер текста в пикселях',
-        'value' => '36',
-        'control_type' => waHtmlControl::INPUT,
-    ),
-    
-    'background_color' => array(
-        'title' => 'Цвет фона',
-        'description' => 'Цвет в шестнадцатиричном виде #000000, http://getcolor.ru/ none - без фона',
-        'value' => '#F4FFBF',
-        'control_type' => waHtmlControl::INPUT,
-    ),
-    
-    'opacity' => array(
-        'title' => 'Прозрачность',
-        'description' => '1 - непрозрачный, 0 - полностью прозрачный',
-        'value' => '0.8',
-        'control_type' => waHtmlControl::INPUT,
-    ),
-    
-    'padding' => array(
-        'title' => 'Оступы',
-        'description' => 'отступы от текста по бокам в пикселях',
-        'value' => '5',
-        'control_type' => waHtmlControl::INPUT,
-    ),
-    
-    'border_radius' => array(
-        'title' => 'Радиус закругления углов',
-        'description' => '0 - без закругления',
-        'value' => '5',
-        'control_type' => waHtmlControl::INPUT,
-    ),
-    
-    'border_width' => array(
-        'title' => 'Толщина бордюра',
-        'description' => 'в пикселях',
         'value' => '1',
-        'control_type' => waHtmlControl::INPUT,
+        'control_type' => waHtmlControl::SELECT,
+        'options' => array(
+            '0' => 'Выключен',
+            '1' => 'Включен',
+        )
     ),
-    'border_color' => array(
-        'title' => 'Цвет бордюра',
-        'description' => 'Цвет в шестнадцатиричном виде #000000, http://getcolor.ru/',
-        'value' => '#CCCCCC',
-        'control_type' => waHtmlControl::INPUT,
+    'frontend_product_output' => array(
+        'title' => 'Вывод в карточке товара(место)',
+        'description' => '',
+        'value' => 'cart',
+        'control_type' => waHtmlControl::SELECT,
+        'options' => array(
+            'cart' => 'Содержимое, добавляемое рядом с кнопкой «В корзину».',
+            'block_aux' => 'Блок дополнительной информации в боковой части страницы.',
+            'block' => 'Блок дополнительной информации в основной части описания товара.',
+        )
+    ),
+    'frontend_category' => array(
+        'title' => 'Вывод на странице категории',
+        'description' => '',
+        'value' => '1',
+        'control_type' => waHtmlControl::SELECT,
+        'options' => array(
+            '0' => 'Выключен',
+            '1' => 'Включен',
+        )
     ),
     
-    
-     
-
+    'custom_text' => array(
+        'title' => 'Произвольный текст',
+        'description' => 'Вы можете сформировать QR-код c произвольным текстом, для вставки используйте хелпер {shopQrcodePlugin::display()}',
+        'value' => 'Произвольный текст',
+        'control_type' => waHtmlControl::INPUT,
+    ),
 );

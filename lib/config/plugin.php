@@ -9,6 +9,7 @@ return array(
     'frontend' => true,
     'handlers' => array(
         'frontend_product' => 'frontendProduct',
+        'frontend_category' => 'frontendСategory',
     ),
 );
 //EOF
