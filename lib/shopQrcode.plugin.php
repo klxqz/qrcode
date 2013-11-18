@@ -1,5 +1,6 @@
 <?php
 
+
 class shopQrcodePlugin extends shopPlugin {
 
     protected static $plugin;
@@ -35,9 +36,10 @@ class shopQrcodePlugin extends shopPlugin {
     }
 
     public function frontendСategory($category) {
+
         if ($this->getSettings('status') && $this->getSettings('frontend_category')) {
             $routing = wa()->getRouting();
-            $category_url = $routing->getUrl($this->app_id . '/frontend/category', array('category_url' => $category->full_url), true);
+            $category_url = $routing->getUrl($this->app_id . '/frontend/category', array('category_url' => $category['full_url']), true);
 
             $url = wa()->getRootUrl();
             $html = '<img src="' . $url . '?plugin=qrcode&data=' . urlencode($category_url) . '"/>';
