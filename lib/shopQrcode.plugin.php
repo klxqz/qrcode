@@ -48,6 +48,7 @@ class shopQrcodePlugin extends shopPlugin {
     public static function display() {
         $plugin = self::getThisPlugin();
         $data = $plugin->getSettings('custom_text');
+        $url = wa()->getRootUrl();
         $html = '<img src="' . $url . '?plugin=qrcode&data=' . urlencode($data) . '"/>';
         return $html;
     }

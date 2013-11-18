@@ -3,9 +3,9 @@
 return array(
     'name' => 'Qrcode',
     'description' => 'Плагин для генерации Бар-кода',
-    'vendor' => 985310,
+    'vendor' => '985310',
     'version' => '1.0.0',
-    'img' => 'img/up.png',
+    'img' => 'img/qrcode.png',
     'frontend' => true,
     'handlers' => array(
         'frontend_product' => 'frontendProduct',
