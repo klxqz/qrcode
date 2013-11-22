@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @author Коробонв Николай wa-plugins.ru <support@wa-plugins.ru>
+ * @link http://wa-plugins.ru/
+ */
 return array(
     'status' => array(
         'title' => 'Статус плагина',
@@ -60,7 +64,6 @@ return array(
             '1' => 'Включен',
         )
     ),
-    
     'custom_text' => array(
         'title' => 'Произвольный текст',
         'description' => 'Вы можете сформировать QR-код c произвольным текстом, для вставки используйте хелпер {shopQrcodePlugin::display()}',

@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @author Коробонв Николай wa-plugins.ru <support@wa-plugins.ru>
+ * @link http://wa-plugins.ru/
+ */
 return array(
     'name' => 'Qrcode',
     'description' => 'Плагин для генерации Бар-кода',

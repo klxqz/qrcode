@@ -1,6 +1,10 @@
 <?php
 
-class shopQrcodePluginFrontendController extends waController {
+/**
+ * @author Коробонв Николай wa-plugins.ru <support@wa-plugins.ru>
+ * @link http://wa-plugins.ru/
+ */
+class shopQrcodePluginFrontendQrcodeController extends waController {
 
     public function execute() {
         $plugin = wa()->getPlugin('qrcode');

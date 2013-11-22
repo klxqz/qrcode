@@ -1,6 +1,9 @@
 <?php
 
-
+/**
+ * @author Коробонв Николай wa-plugins.ru <support@wa-plugins.ru>
+ * @link http://wa-plugins.ru/
+ */
 class shopQrcodePlugin extends shopPlugin {
 
     protected static $plugin;
@@ -28,8 +31,8 @@ class shopQrcodePlugin extends shopPlugin {
                 'category_url' => $product->category_url,
                     ), true);
 
-            $url = wa()->getRootUrl();
-            $html = '<img src="' . $url . '?plugin=qrcode&data=' . urlencode($product_url) . '"/>';
+            $url = wa()->getAppUrl('shop');
+            $html = '<img src="' . $url . 'qrcode/?data=' . urlencode($product_url) . '"/>';
             $frontend_product_output = $this->getSettings('frontend_product_output');
             return array($frontend_product_output => $html);
         }
@@ -41,8 +44,8 @@ class shopQrcodePlugin extends shopPlugin {
             $routing = wa()->getRouting();
             $category_url = $routing->getUrl($this->app_id . '/frontend/category', array('category_url' => $category['full_url']), true);
 
-            $url = wa()->getRootUrl();
-            $html = '<img src="' . $url . '?plugin=qrcode&data=' . urlencode($category_url) . '"/>';
+            $url = wa()->getAppUrl('shop');
+            $html = '<img src="' . $url . 'qrcode/?data=' . urlencode($category_url) . '"/>';
             return $html;
         }
     }
@@ -50,8 +53,8 @@ class shopQrcodePlugin extends shopPlugin {
     public static function display() {
         $plugin = self::getThisPlugin();
         $data = $plugin->getSettings('custom_text');
-        $url = wa()->getRootUrl();
-        $html = '<img src="' . $url . '?plugin=qrcode&data=' . urlencode($data) . '"/>';
+        $url = wa()->getAppUrl('shop');
+        $html = '<img src="' . $url . 'qrcode/?data=' . urlencode($data) . '"/>';
         return $html;
     }
 
