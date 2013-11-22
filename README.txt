@@ -1,4 +1,4 @@
-Плагин "Слайдер" для Shop-Script 5
+Плагин "Бар-код" для Shop-Script 5
 --------------------------
 Разработчик Коробонв Николай wa-plugins.ru <support@wa-plugins.ru>
 
@@ -6,12 +6,12 @@
 --------------------------
 Установка:
 
-   1) Скопируйте в каталог wa-apps/shop/plugins/ папку slider/
+   1) Скопируйте в каталог wa-apps/shop/plugins/ папку qrcode/
     2) Добавьте запись в конфигурационный файл фреймворка wa-config/apps/shop/plugins.php:
-          'slider' => true
+          'qrcode' => true
           Пример содержимого файла plugins.php:
             return array (
-                'slider' => true
+                'qrcode' => true
             );
 --------------------------
 Использование:
